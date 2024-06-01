@@ -1,0 +1,1428 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*html{
+    font-size: 62.5%;
+}*/
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    list-style: none;
+    color: #000000;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    margin: 0;
+    padding: 0;
+}
+#addProduct {
+    position: fixed;
+    top: 60px;
+    right: 10px;
+    color: white;
+    background-color: rgb(60, 183, 60);
+    padding: 20px;
+    width: fit-content;
+    border-radius: 12px;
+    font-family: "Noto Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; 
+    z-index: 9999;
+ 
+}
+
+/*------------------------------------- *********** Section 1 ********** ------------------------------*/
+.pt-60 {
+    padding: 60px 0;
+}
+
+.mt-40 {
+    margin-top: 40px;
+}
+
+.pb-64 {
+    padding-bottom: 64px;
+}
+
+/*Cusom Navbar*/
+
+.main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    transition: all .3s linear;
+    z-index: 1000;
+}
+
+.main-nav.bgchange {
+    background: rgb(244, 225, 240);
+    transition: all .3s linear;
+}
+
+
+.main-nav .navbar {
+    height: 80px;
+    flex-wrap: nowrap;
+    position: unset;
+    transition: all .3s linear;
+}
+
+.pt-80 {
+    padding-top: 80px;
+}
+
+.main-nav .nav-items {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-items a {
+    color: #667085;
+    font-family: "Noto Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    /* 171.429% */
+}
+
+.nav-link:focus {
+    color: #667085;
+}
+
+.nav-items .active,
+.nav-link:hover,
+.nav-items a:focus {
+    color: #FF4DCD;
+}
+
+.main-nav #nav-toggler {
+    display: none;
+}
+
+.wish-list {
+    display: flex;
+    gap: 24px;
+    cursor: pointer;
+}
+.wish-list  .add-to-cart{
+    position: relative;
+}
+.wish-list .counter-nomber{
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #FF4DCD;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.wish-list .counter-nomber p{
+    color: #FFFAFE;
+text-align: center;
+
+/* Body/Tiny/600 */
+font-family: "Public Sans";
+font-size: 12px;
+font-style: normal;
+font-weight: 600;
+line-height: 16px; /* 133.333% */
+}
+
+.view-mobile {
+    display: none;
+}
+
+/*------------------hero-section----------- */
+.hero-section {
+    padding: 108px 0 251px 0;
+    background-image: url(../images/herobg.png);
+    background-size: 100% 100%;
+    min-height: calc(100vh - 90px);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+
+
+}
+
+.hero-section .hero-heading {
+    color: #000;
+    font-family: "Noto Serif";
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.hero-section .hero-heading span {
+    color: #FF4CCD;
+}
+
+.hero-section .order-now-btn {
+    margin-top: 32px;
+    color: #FFF;
+    font-family: "Noto Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+    /* 155.556% */
+    border-radius: var(--radius-md, 8px);
+    border: 1px solid #FF4CCD;
+    background: #FF4CCD;
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    padding: 13px 34px;
+    text-decoration: none;
+    display: block;
+    width: fit-content;
+}
+
+.hero-section .order-now-btn:hover {
+    background: #FFF;
+    color: #FF4CCD;
+
+
+}
+
+/* delicious1-section */
+.delicious-section {
+    padding: 113px 0 65px 0;
+}
+
+.delicious-section .delicious1 {
+    padding: 17px 22px;
+    background-image: url(../images/deliciousbakery.png);
+    background-size: 100% 100%;
+    border-radius: 24px;
+
+}
+
+.delicious-section .delicious2 {
+    padding: 17px 22px;
+    background-image: url(../images/friendlystaff.png);
+    background-size: 100% 100%;
+    border-radius: 24px;
+}
+
+.delicious-section .delicious3 {
+    padding: 17px 22px;
+    background-image: url(../images/qualitychef.png);
+    background-size: 100% 100%;
+    border-radius: 24px;
+}
+
+.delicious-section .delicious-card {
+    padding: 40px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.70);
+    backdrop-filter: blur(1.5px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.delicious-section .delicious-card h2 {
+    padding-top: 40px;
+    color: var(--Heading, #1F2D3E);
+    text-align: center;
+    font-family: "Noto Serif";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 40px;
+    /* 142.857% */
+}
+
+.delicious-section .delicious-card p {
+    padding-top: 8px;
+    color: var(--Main-Text, var(--Colors-Gray-true-600, #525252));
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: "Noto Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+}
+
+/*--------- top-picks-section--------- */
+.top-picks-section {
+    padding: 96px 0 48px 0;
+}
+
+.mt-30 {
+    margin-top: 30px;
+}
+
+.picks-head {
+    color: var(--Foundation-Grey-Normal, #231F20);
+    font-family: "Noto Serif";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-bottom: 3px dotted #BBBABA;
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0 84px 9px 84px;
+}
+
+.cup-cake-img {
+    position: relative;
+
+}
+
+.img-title {
+    position: absolute;
+    top: 30px;
+    border-radius: var(--radius-none, 0px) var(--radius-xl, 12px) var(--radius-xl, 12px) var(--radius-none, 0px);
+    background: var(--Colors-Error-500, #F04438);
+    color: #FFF;
+    font-family: "Noto Sans";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding: 6px 8px;
+}
+
+.ms-favourite {
+    background: #4C7EFF;
+}
+
+.cupcake-title {
+    color: var(--gray-light-mode-800, var(--colors-gray-light-mode-800, #182230));
+    font-family: "Noto Serif";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.cupcake-prise {
+    color: #EC0FAE;
+    text-align: center;
+    font-family: "Noto Serif";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.cupcak-edescription {
+    width: 100%;
+    max-width: 291px;
+    padding-top: 6px;
+    color: var(--gray-light-mode-600, var(--colors-gray-light-mode-600, #475467));
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: "Noto Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.main-select {
+    padding-top: 12px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.main-select select {
+    padding: 8px 12px;
+    width: 80px;
+    height: 40px;
+    overflow: hidden;
+    color: var(--gray-light-mode-800, var(--colors-gray-light-mode-800, #182230));
+    text-overflow: ellipsis;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    border-radius: var(--radius-md, 8px);
+    border: 1px solid var(--Colors-Border-border-primary, #D0D5DD);
+    background: var(--Colors-Background-bg-primary, #FFF);
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    cursor: pointer;
+}
+
+.main-select .wishlist {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #FF4CCD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.view-morebtn {
+    border-radius: 9.6px;
+    border: 1.2px solid #FF4CCD;
+    color: #FF4CCD;
+    text-align: center;
+    font-family: "Noto Serif";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding: 14px 33px;
+    width: fit-content;
+    margin: 52px auto;
+    display: block;
+    text-decoration: none;
+
+}
+
+.view-morebtn:hover {
+    background-color: #FF4CCD;
+    color: white;
+
+}
+
+/* .ourclients-section  */
+
+.ourclients-section {
+    position: relative;
+    padding: 60px 0;
+}
+
+.client-img {
+    width: 100%;
+    max-width: 537px;
+}
+
+.ourclients-section .client-text h2 {
+    color: var(--Foundation-Grey-Normal, #231F20);
+    font-family: "Noto Serif";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-bottom: 3px dotted #BBBABA;
+    width: fit-content;
+    padding: 0 84px 9px 0;
+}
+
+.ourclients-section .client-text {}
+
+.ourclients-section .client-text .client-desc {
+    padding: 16px 0 32px 0;
+    color: var(--Color-Neutral-Neutral-700, #404040);
+    text-align: justify;
+    font-family: "Noto Sans";
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 30px;
+    /* 166.667% */
+}
+
+.ourclients-section .client-text .client-name {
+    color: var(--Color-Neutral-Neutral-800, #262626);
+    font-family: "Noto Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.ourclients-section .client-text .client-desi {
+    color: var(--Color-Neutral-Neutral-600, #525252);
+    font-family: "Noto Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.ourclients-section .swiper-button {
+    position: absolute;
+    bottom: 70px;
+    right: 80px;
+}
+
+.ourclients-section .swiper-button .swiper-button-next,
+.ourclients-section .swiper-button .swiper-button-prev {
+    width: 50px;
+    height: 50px;
+}
+
+.ourclients-section .swiper-button .swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+    content: '';
+    background-image: url(../images/icons/guidance_up-arrow.svg);
+    width: 60px;
+    height: 49px;
+    background-repeat: no-repeat;
+    rotate: 180deg;
+}
+
+.ourclients-section .swiper-button .swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+    content: '';
+    background-image: url(../images/icons/guidance_up-arrow.svg);
+    width: 60px;
+    height: 49px;
+    background-repeat: no-repeat;
+}
+
+.main-touch {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.touch-icons {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #FFEBF9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-touch h2 {
+    color: var(--colors-text-text-primary-900, #101828);
+    text-align: center;
+    font-family: "Noto Serif";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px;
+    /* 150% */
+}
+
+.main-touch p {
+    padding-top: 8px;
+    color: var(--colors-text-text-tertiary-600, #475467);
+    text-align: center;
+    font-family: "Noto Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 150% */
+}
+
+.main-touch a {
+    color: var(--Primary-brand-500, #FF4CCD);
+    text-align: center;
+    font-family: "Noto Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    /* 150% */
+    text-decoration: none;
+}
+
+/* footer-section */
+
+.footer-section {
+    background: var(--Colors-Background-bg-secondary, #F9FAFB);
+    padding: 64px 0 48px 0;
+}
+
+.footer-section .lorem-description {
+    padding-top: 24px;
+    width: 100%;
+    max-width: 360px;
+    color: var(--gray-light-mode-500, var(--colors-gray-light-mode-500, #667085));
+    font-family: "Noto Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    /* 171.429% */
+}
+
+.footer-section .stya-date {
+    color: var(--colors-text-text-primary-900, #101828);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+
+}
+
+.footer-section .input-field {
+    padding-top: 16px;
+    display: flex;
+    gap: 16px;
+    position: relative;
+}
+.footer-section .input-field #email-error{
+    position: absolute;
+    color: red;
+    bottom: -25px;
+}
+
+.footer-section .input-field input {
+    width: 100%;
+    max-width: 560px;
+    border-radius: var(--radius-md, 8px);
+    border: 1px solid var(--Colors-Border-border-primary, #D0D5DD);
+    background: var(--Colors-Background-bg-primary, #FFF);
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    padding: 10px 14px;
+    color: black;
+
+}
+
+.footer-section .input-field input::placeholder {
+    color: var(--Colors-Text-text-placeholder, #667085);
+    text-overflow: ellipsis;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.footer-section .input-field button {
+    border-radius: var(--radius-md, 8px);
+    background: var(--Primary-brand-500, #FF4CCD);
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    padding: 10px 18px;
+    color: var(--Component-colors-Components-Buttons-Primary-button-primary-fg, #FFF);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    border: 1px solid #FF4CCD;
+}
+
+.footer-section .input-field button:hover {
+    background: var(--Primary-brand-500, #FFF);
+    color: var(--Component-colors-Components-Buttons-Primary-button-primary-fg, #FF4CCD);
+}
+
+.footer-section .nav-items {
+    padding-top: 48px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.footer-section .main-terms-policy {
+    padding-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-top: 1px solid var(--Colors-Border-border-secondary, #EAECF0);
+    /* 150% */
+}
+
+.main-terms-policy p,
+.main-terms-policy .terms-link a {
+    color: var(--colors-text-text-quarterary-500, #667085);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    text-decoration: none;
+}
+
+.terms-link {
+    display: flex;
+    gap: 16px;
+    padding-right: 50px;
+
+}
+
+/* cupcake-hero-page-2 */
+
+.cupcake-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    min-height: 500px;
+}
+
+.cupcake-hero p {
+    padding-top: 16px;
+    width: 100%;
+    max-width: 867px;
+    margin: 0 auto;
+    color: var(--Main-Text, var(--Colors-Gray-true-600, #525252));
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: "Noto Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 25px;
+    /* 156.25% */
+
+}
+
+.main-tastecupacke {
+    width: 100%;
+    max-width: 1104px;
+    margin: 0 auto;
+    padding-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+
+}
+
+.main-tastecupacke .taste-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 16px;
+}
+
+.main-tastecupacke .taste-icon p {
+    color: var(--Heading, #1F2D3E);
+    font-family: "Noto Serif";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.our-cupcake-section .cupcake-title {
+    font-size: 20px;
+}
+
+.our-cupcake-section .cupcake-prise {
+    font-size: 24px;
+}
+
+.our-cupcake-section .cupcak-edescription {
+    font-size: 14px;
+}
+
+.events-section {}
+
+.eventcupcake-img {
+    position: relative;
+}
+
+.event-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    padding: 32px var(--spacing-xl, 16px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    border-radius: 24px;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(2.5px);
+}
+
+.event-name p {
+    color: #FFF;
+    text-align: center;
+    font-family: "Noto Serif";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
+    /* 142.857% */
+}
+
+.Wedding .wedding-description {
+    padding-top: 24px;
+    color: #000;
+    text-align: justify;
+    font-family: "Noto Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    /* 155.556% */
+}
+
+.wedding-img {
+    width: 100%;
+    max-width: 600px;
+}
+
+.view-more-button {
+    width: fit-content;
+    display: flex;
+    padding: 14.4px 33.6px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    border-radius: 9.6px;
+    background: #FF4CCD;
+    color: #FFF;
+    text-align: center;
+    font-family: "Noto Serif";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration: none;
+    border: 1px solid #FF4CCD;
+}
+
+.view-more-button:hover {
+
+    background: #FFF;
+    color: #FF4CCD;
+}
+
+/* .marketing-section{
+    width: 100%;
+    max-width: 1400px;
+} */
+.marketing-section .main-markeeting {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+}
+
+.main-markeeting .Wedding {
+    width: 100%;
+    max-width: 688px;
+    padding-left: 80px;
+}
+
+/* marketing-clients-section */
+.marketing-clients-section .main-client {
+    padding-top: 57px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+    justify-content: center;
+
+}
+
+.about-text {
+    position: relative;
+}
+
+.about-text .errow-img {
+    position: absolute;
+    top: -230px;
+    left: 60%;
+    rotate: 5deg;
+}
+
+.main-testi {
+    border-radius: 24px;
+    background: linear-gradient(180deg, #FFF0FA 0%, #FDCAF1 100%);
+    padding: 48px 102px 48px 48px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: center;
+}
+.main-testi .michelle-text{
+width: 100%;
+max-width: 725px;
+}
+.main-testi .mother-michelle{
+width: 100%;
+max-width: 354px;
+}
+
+.michelle-text .michelle-p {
+    color: var(--Base-Black, var(--Colors-Base-black, #000));
+    -webkit-text-stroke-width: 0.20000000298023224;
+    -webkit-text-stroke-color: var(--Base-Black, var(--Colors-Base-black, #000));
+    font-family: "Noto Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    /* 160% */
+    padding-left: 55px;
+}
+
+.michelle-text .naia-p {
+    padding-top: 32px;
+    color: #FF4CCD;
+    -webkit-text-stroke-width: 0.4000000059604645;
+    -webkit-text-stroke-color: #FF4CCD;
+    font-family: "Noto Serif";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    /* 160% */
+    padding-left: 55px;
+}
+
+
+/* contect-us-section */
+.contect-us-section {
+    padding: 130px 0 64px 0;
+}
+
+.contectus-form {
+    padding: 0 48px;
+}
+
+.contectus-form .form-heading {
+    color: var(--Foundation-Grey-Normal, #231F20);
+    font-family: "Noto Serif";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.contectus-form .form-desc {
+    padding-top: 20px;
+    color: var(--colors-text-text-tertiary-600, #475467);
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    /* 150% */
+}
+
+.contectus-form .input-filed {
+    margin-top: 24px;
+    position: relative;
+
+}
+
+.contectus-form .name-field {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.contectus-form .input-filed label {
+    width: 100%;
+    color: var(--colors-text-text-secondary-700, #344054);
+    font-family: "Noto Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    padding-bottom: 6px;
+}
+.contectus-form .input-filed label.error{
+    position: absolute;
+    color: red;
+    left: 0;
+    top: calc(100% + 4px);
+}
+
+
+
+.contectus-form .input-filed input,
+.contectus-form .input-filed textarea {
+    width: 100%;
+    border-radius: var(--radius-md, 8px);
+    border: 1px solid var(--Colors-Border-border-primary, #D0D5DD);
+    background: var(--Colors-Background-bg-primary, #FFF);
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    padding: 10px 14px;
+    color: black;
+}
+
+.contectus-form .input-filed textarea {
+    min-height: 134px;
+
+}
+
+.contectus-form .input-filed input::placeholder,
+.contectus-form .input-filed textarea::placeholder {
+    overflow: hidden;
+    color: var(--Colors-Text-text-placeholder, #667085);
+    text-overflow: ellipsis;
+    font-family: "Noto Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 150% */
+}
+
+.contectus-form .form-check-field {
+    padding-top: 24px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    position: relative;
+}
+
+.contectus-form .iti {
+    width: 100%;
+}
+
+#privacyPolicy-error,
+#phoneNumber-error {
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    color: red;
+}
+
+.contectus-form .form-check-field label,
+.contectus-form .form-check-field label a {
+    color: var(--colors-text-text-tertiary-600, #475467);
+    font-family: "Noto Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 150% */
+}
+
+.contectus-form .contecus-img {
+    width: 100%;
+    max-width: 576px;
+}
+
+.contectus-form button {
+    margin-top: 32px;
+    width: 100%;
+    display: flex;
+    padding: var(--spacing-lg, 12px) 18px;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-sm, 6px);
+    align-self: stretch;
+    border-radius: var(--radius-md, 8px);
+    background: #FF4CCD;
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    color: var(--Component-colors-Components-Buttons-Primary-button-primary-fg, #FFF);
+    font-family: "Noto Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    border: 1px solid #FF4CCD;
+}
+
+.contectus-form button:hover {
+    background: #FFF;
+    color: #FF4CCD;
+}
+
+/* success-model */
+.successs-model{
+    border-radius: 20px;
+}
+.successs-model .modal-body {
+    padding: 40px;
+
+}
+
+.success-text .succes-p{
+    padding-top: 16px;
+    color: #FF4CCD;
+text-align: center;
+font-family: Inter;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: 32px; /* 133.333% */
+}
+
+.success-text .Shortly-p{
+    padding-top: 12px;
+    color: #4A4A4A;
+    text-align: center;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+}
+.continue-btn{
+    color: var(--Component-colors-Components-Buttons-Primary-button-primary-fg, #FFF);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    margin: 32px auto 0;
+    border-radius: var(--radius-md, 8px);
+    background: var(--Primary-brand-500, #FF4CCD);
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border: none;
+}
+
+
+
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 567px;
+        margin: 1.75rem auto;
+    }
+}
+
+
+
+
+
+
+@media screen and (max-width: 1200px) {
+    .main-nav #nav-toggler {
+        display: block;
+        font-size: 20px;
+        color: #FF4CCD;
+        width: 25px;
+    }
+
+    .main-nav .nav-items {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        height: auto;
+        width: 100%;
+        background: rgb(244, 225, 240);
+        flex-direction: column;
+        align-items: start;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: all .3s linear;
+        padding: 24px;
+    }
+
+    .main-nav .nav-items.show {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+        border-radius: 0px 0px 30px 30px;
+        transition: all .5s linear;
+    }
+
+    .view-mobile {
+        display: block;
+    }
+
+    .wish-list {
+        display: none;
+    }
+    
+
+}
+
+@media screen and (max-width: 1200px) {
+
+    .navbar-collapse.show {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    .about-text .errow-img {
+        display: none;
+    }
+    .main-testi {
+        padding: 48px 30px 48px 14px
+    }
+
+    /* .navbar-light .navbar-toggler {
+    color: rgba(0,0,0,.55);
+    border-color: rgba(0,0,0,.1);
+    padding: 0;
+    border: none;
+    outline: none;
+    box-shadow: none;
+} */
+}
+
+@media screen and (max-width: 991px) {
+    .cupcake-img {
+        padding-top: 32px;
+    }
+
+    .delicious-section {
+        padding: 0px 0 65px 0;
+    }
+
+    .main-markeeting {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .main-markeeting .Wedding {
+        padding: 0 40px;
+    }
+
+    .wedding-img {
+        padding-left: 30px;
+    }
+
+    .cupcake-hero {
+        min-height: 400px;
+    }
+    .main-testi {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .hero-section .hero-heading {
+        font-size: 40px;
+    }
+
+    .delicious-section .delicious3 {
+        padding: 14px 18px;
+    }
+
+
+}
+
+@media screen and (max-width: 550px) {
+    .ourclients-section .client-text h2 {
+        padding-top: 24px;
+        font-size: 28px;
+    }
+
+    .ourclients-section .swiper-button .swiper-button-next,
+    .ourclients-section .swiper-button .swiper-button-prev {
+        width: 50px;
+        height: 70px;
+    }
+
+    .ourclients-section .swiper-button .swiper-button-next:after,
+    .swiper-rtl .swiper-button-prev:after,
+    .ourclients-section .swiper-button .swiper-button-prev:after,
+    .swiper-rtl .swiper-button-next:after {
+        background-size: contain;
+        height: 30px;
+    }
+
+    .main-markeeting .Wedding {
+        padding: 0 12px;
+    }
+
+    .wedding-img {
+        padding-left: 12px;
+    }
+
+    .marketing-clients-section .main-client {
+        padding-top: 32px;
+        gap: 24px;
+    }
+
+    .contectus-form {
+        padding: 0px;
+    }
+
+    .contectus-form .name-field {
+        display: unset;
+    }
+
+
+}
+
+@media screen and (max-width: 450px) {
+    .mt-30 {
+        margin-top: 12px;
+    }
+
+    .cupcake-hero {
+        padding: 102px 0 60px 0 !important;
+        min-height: 300px;
+        background-size: contain;
+    }
+
+    .ourclients-section,
+    .top-picks-section,
+    .delicious-section,
+    .pt-60,
+    .footer-section {
+        padding: 30px 0;
+    }
+
+    .hero-section {
+        padding: 108px 0 130px 0;
+    }
+
+    .hero-section .hero-heading {
+        font-size: 36px;
+    }
+
+    .hero-section .order-now-btn {
+        padding: 12px 18px;
+    }
+
+    .delicious-section .delicious-card {
+        padding: 30px 40px;
+    }
+
+    .delicious-section .delicious1,
+    .delicious-section .delicious2,
+    .delicious-section .delicious3 {
+        padding: 14px 14px;
+    }
+
+    .picks-head,
+    .contectus-form .form-heading {
+        font-size: 28px;
+        line-height: normal;
+    }
+    .picks-head{
+        padding: 10px;
+    }
+
+    .mt-40 {
+        margin-top: 12px;
+    }
+
+    .delicious-section .delicious-card h2 {
+        padding-top: 20px;
+        font-size: 24px;
+        line-height: normal;
+    }
+
+    .cupcake-prise,
+    .ourclients-section .client-text h2 {
+        font-size: 24px;
+    }
+
+    .cupcake-title {
+        font-size: 20px;
+    }
+
+    .delicious-section .delicious-card p {
+        font-size: 14px;
+        line-height: normal;
+    }
+
+    .ourclients-section .client-text .client-desc,
+    .Wedding .wedding-description,
+    .michelle-text .michelle-p {
+        font-size: 16px;
+        line-height: normal;
+    }
+
+    .cupcak-edescription,
+    .footer-section .input-field button,
+    .footer-section .input-field input::placeholder,
+    .main-terms-policy p,
+    .main-terms-policy .terms-link a,
+    .cupcake-hero p {
+        font-size: 14px;
+        line-height: normal;
+    }
+
+    .footer-section .input-field {
+        gap: 6px;
+    }
+
+    .footer-section .nav-items {
+        gap: 23px;
+    }
+
+    .footer-section .nav-link {
+        padding: 0;
+    }
+
+    .pb-64 {
+        padding-bottom: 24px;
+    }
+
+    .footer-section .main-terms-policy {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .terms-link {
+        padding-right: 0;
+
+    }
+
+    .view-more-button {
+        padding: 10.4px 24.6px;
+        font-size: 18px;
+    }
+    .success-text .succes-p{
+        font-size: 20px;
+        
+    }
+    .success-text .Shortly-p{
+        font-size: 14.685px;
+    }
+    .continue-btn{
+        font-size: 18.685px;
+        padding: 10px 30px;
+    }
+    #addProduct {
+        font-size: 16px;
+    }
+    .successs-model .modal-body {
+        padding: 20px 10px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .footer-section .nav-items {
+        gap: 12px;
+    }
+
+    .hero-section .hero-heading {
+        font-size: 33px;
+    }
+
+    .ourclients-section .client-text .client-desc,
+    .Wedding .wedding-description {
+        font-size: 16px;
+
+    }
+
+    .cupcake-prise,
+    .ourclients-section .client-text h2 {
+        font-size: 22px;
+    }
+
+    .contectus-form .form-desc {
+        font-size: 18px;
+        line-height: normal;
+    }
+}
