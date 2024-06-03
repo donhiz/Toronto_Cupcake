@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Page</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
           content="Toronto Cupcake offers a delectable assortment of gourmet cupcakes, crafted with love and creativity. Indulge in our delightful treats, perfect for any occasion.">
     <!---------------------- Bootstrap Cdn---------------------->
@@ -84,26 +83,91 @@
 <div class="team-container">
     <h1 class="team-title">Meet Our Team</h1>
     <div class="team-members">
-        <div class="team-member">
-            <img src="assets/images/images.png" alt="Member 1" class="member-photo">
+        <div class="team-member" data-name="Hoang Nguyen" data-role="Role 1" data-description="This is a detailed description about Hoang Nguyen. Hoang Nguyen is responsible for managing and leading the development team to ensure timely delivery of high-quality software products.">
+            <img src="assets/images/images.png" alt="Hoang Nguyen" class="member-photo lazy">
             <h2 class="member-name">Hoang Nguyen</h2>
             <p class="member-role">Role 1</p>
-            <p class="member-description">This is a short description about Member 1.</p>
+            <p class="member-description">This is a short description about Hoang Nguyen.</p>
         </div>
-        <div class="team-member">
-            <img src="assets/images/images.png" alt="Member 2" class="member-photo">
+        <div class="team-member" data-name="Phuc Vo" data-role="Role 2" data-description="This is a detailed description about Phuc Vo. Phuc Vo oversees the marketing strategies and ensures the brand reaches its target audience effectively.">
+            <img src="assets/images/images.png" alt="Phuc Vo" class="member-photo lazy">
             <h2 class="member-name">Phuc Vo</h2>
             <p class="member-role">Role 2</p>
-            <p class="member-description">This is a short description about Member 2.</p>
+            <p class="member-description">This is a short description about Phuc Vo.</p>
         </div>
-        <div class="team-member">
-            <img src="assets/images/images.png" alt="Member 3" class="member-photo">
+        <div class="team-member" data-name="Nhi Do" data-role="Role 3" data-description="This is a detailed description about Nhi Do. Nhi Do focuses on product design and ensures that all user interfaces are intuitive and user-friendly.">
+            <img src="assets/images/images.png" alt="Nhi Do" class="member-photo lazy">
             <h2 class="member-name">Nhi Do</h2>
             <p class="member-role">Role 3</p>
-            <p class="member-description">This is a short description about Member 3.</p>
+            <p class="member-description">This is a short description about Nhi Do.</p>
         </div>
     </div>
 </div>
+
+<!-- Modal -->
+<div class="modal fade" id="memberModal" tabindex="-1" aria-labelledby="memberModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="memberModalLabel">Team Member Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="text-center">
+                    <img src="" alt="Member Photo" class="modal-member-photo img-fluid rounded-circle mb-3">
+                </div>
+                <h2 class="modal-member-name text-center"></h2>
+                <h4 class="modal-member-role text-center text-muted mb-3"></h4>
+                <p class="modal-member-description text-center"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Scroll to Top Button -->
+<button id="scrollToTopBtn" title="Go to top"><i class="fa fa-arrow-up"></i></button>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // Modal pop-up
+        $('.team-member').on('click', function () {
+            const name = $(this).data('name');
+            const role = $(this).data('role');
+            const description = $(this).data('description');
+            const photoSrc = $(this).find('.member-photo').attr('src');
+
+            $('.modal-member-name').text(name);
+            $('.modal-member-role').text(role);
+            $('.modal-member-description').text(description);
+            $('.modal-member-photo').attr('src', photoSrc);
+
+            $('#memberModal').modal('show');
+        });
+
+        // Scroll to Top Button
+        const scrollToTopBtn = $('#scrollToTopBtn');
+
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 100) {
+                scrollToTopBtn.fadeIn();
+            } else {
+                scrollToTopBtn.fadeOut();
+            }
+        });
+
+        scrollToTopBtn.on('click', function () {
+            $('html, body').animate({ scrollTop: 0 }, 800);
+            return false;
+        });
+
+        // Lazy Loading
+        lazyload();
+    });
+</script>
 </body>
 
 </html>

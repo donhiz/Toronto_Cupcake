@@ -1135,6 +1135,11 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 10px;
     width: 200px;
+    cursor: pointer;
+}
+
+.team-member:hover {
+    background-color: #e04bb7;
 }
 
 .member-photo {
@@ -1143,20 +1148,63 @@ body {
     height: 100px;
 }
 
-.member-name {
+.member-name, .member-role, .member-description {
     color: #fff;
     margin: 10px 0;
 }
 
-.member-role {
-    color: #fff;
-    margin: 5px 0;
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: #FF4DCD;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 15px;
+    cursor: pointer;
 }
 
-.member-description {
-    color: #fff;
-    font-size: 14px;
+#scrollToTopBtn:hover {
+    background-color: #e04bb7;
 }
+
+.modal-content {
+    border-radius: 20px;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-body {
+    padding: 30px;
+}
+
+.modal-member-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #FF4DCD;
+}
+
+.modal-member-name {
+    font-size: 2em;
+    color: #333;
+}
+
+.modal-member-role {
+    font-size: 1.2em;
+    color: #777;
+}
+
+.modal-member-description {
+    font-size: 1em;
+    color: #555;
+}
+
+
 
 
 /* Responsive Design */
