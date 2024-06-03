@@ -123,38 +123,4 @@ function cartMessage() {
 }
 cartMessage()
 
-//Team page code
-$(document).ready(function () {
-    // Modal pop-up
-    $('.team-member').on('click', function () {
-        const name = $(this).data('name');
-        const role = $(this).data('role');
-        const description = $(this).data('description');
-
-        $('.modal-member-name').text(name);
-        $('.modal-member-role').text(role);
-        $('.modal-member-description').text(description);
-
-        $('#memberModal').modal('show');
-    });
-
-    // Scroll to Top Button
-    const scrollToTopBtn = $('#scrollToTopBtn');
-
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
-            scrollToTopBtn.fadeIn();
-        } else {
-            scrollToTopBtn.fadeOut();
-        }
-    });
-
-    scrollToTopBtn.on('click', function () {
-        $('html, body').animate({ scrollTop: 0 }, 800);
-        return false;
-    });
-
-    // Lazy Loading
-    lazyload();
-});
 
